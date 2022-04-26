@@ -63,19 +63,22 @@ const mytools = {
                 }
                 let count = 0
                 let paletteNumber = 1
-                let parcel = [{palette_number: paletteNumber, packages: []}]
+                let palettes = {total_price: 0, items: [{palette_number: paletteNumber, packages: [], palette_price: 0}]}
                 for(let i = 0; i < newTab.length; i++){ // creating our palettes
                     count++
                     if(count >= 15){
                         paletteNumber++
-                        parcel.push({palette_number: paletteNumber, packages: [newTab[i]]})
+                        palettes.items.push({palette_number: paletteNumber, packages: [newTab[i]], palette_price: newTab[i].price})
                         count = 0
+                        palettes.total_price = palettes.total_price + newTab[i].price
                     }
                     else{
-                        parcel[parcel.length-1].packages.push(newTab[i])
+                        palettes.items[palettes.items.length-1].packages.push(newTab[i])
+                        palettes.items[palettes.items.length-1].palette_price = palettes.items[palettes.items.length-1].palette_price + newTab[i].price
+                        palettes.total_price = palettes.total_price + newTab[i].price
                     }
                 }
-                resolve(parcel) // return array with each parcels containing 15 packages
+                resolve(palettes) // return an object with the total_price of the operation and an array with each palettes containing 15 packages
             })()
         })
     }
