@@ -9,7 +9,7 @@ the project for the Wing technical test
 # Expected output
 ```
 {
-  total_prices: 2134, // the total price of the operation (including all palette)
+  total_prices: 2134, // the total price of the operation (including all palettes)
   items: [ // list of all palettes
     {
       palette_number: 1, 
