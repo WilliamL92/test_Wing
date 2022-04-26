@@ -14,7 +14,7 @@ the project for the Wing technical test
     {
       palette_number: 1, 
       palette_price: 113, // The total price of the current pallets (including all the 15 packages)
-      packages: [ // list of all packages in the pallette (15 elements expected)
+      packages: [ // list of all packages in the pallet (15 elements expected)
         {
           tracking_id: '%b9%D1Akc6t8]X[',
           items: [{id: '5bb619e49593e5d3cbaa0b52', name: 'Flowers', weight: '1.5'}, {...}], // list of all items in the current package
