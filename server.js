@@ -13,8 +13,8 @@ app.use(express.static('public'))
 
 const items = JSON.parse(fs.readFileSync('./data-json/items.json')) // read items.json file
 const orders = JSON.parse(fs.readFileSync('./data-json/orders.json')) // read orders.json file
-mytools.generatePackage(orders, items).then((packages)=>{ // this method return an array of each palettes containing 15 packages containing all items by order < 30 kg
-  console.log(packages)
+mytools.generatePackage(orders, items).then((packages)=>{ // this method return an object with the total price of the operation and an array of each palettes containing 15 packages containing all items by order < 30 kg
+  console.log(packages.items[0])
 })
 
 server.listen(process.env.PORT, () => {
