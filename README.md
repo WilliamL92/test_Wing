@@ -9,11 +9,11 @@ the project for the Wing technical test
 # Expected output
 ```
 {
-  total_prices: 2134, // the total price of the operation (including all palettes)
-  items: [ // list of all palettes
+  total_prices: 2134, // the total price of the operation (including all pallets)
+  items: [ // list of all pallets
     {
       palette_number: 1, 
-      palette_price: 113, // The total price of the current palette (including all the 15 packages)
+      palette_price: 113, // The total price of the current pallets (including all the 15 packages)
       packages: [ // list of all packages in the pallette (15 elements expected)
         {
           tracking_id: '%b9%D1Akc6t8]X[',
